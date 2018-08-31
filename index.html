@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>纯javascript实现自动发送邮件</title>
+
+</head>
+
+<body>
+    <a href='javascript:mailsome1()'>E-Mail Someone!</a>
+    <input type=button value="E-Mail Someone!" onClick="mailsome1()">
+</body>
+<script type="text/javascript">
+    function mailsome1() {
+        who = prompt("Enter recipient's email address: ", "971731208@qq.com");
+        what = prompt("Enter the subject: ", "wyy");
+        if (confirm("Are you sure you want to mail " + who + " with the subject of " + what + "?") == true) {
+            parent.location.href = 'mailto:' + who + '?subject=' + what + '';
+        }
+    }
+</script>
+
+
+</html>
